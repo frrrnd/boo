@@ -62,7 +62,7 @@ body {
 }
 
 .makeMeAppear {
-    animation: 1s makeMeAppear .4s forwards;
+    animation: makeMeAppear .4s ease .8s forwards;
 }
 
 @keyframes makeMeAppear {
