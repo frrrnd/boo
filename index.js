@@ -23,7 +23,17 @@ let title = document.querySelectorAll('[data-appear-title]')
 const showTitle = () => {
     for (const ttl of title) {
         if (isVisible(ttl)) {
-            ttl.classList.add('makeMeAppear')
+            ttl.classList.add('makeMeAppearTitle')
+        }
+    }
+}
+
+let images = document.querySelectorAll('[data-appear-image]')
+
+const imageScale = () => {
+    for (const img of images) {
+        if (isVisible(img)) {
+            img.setAttribute("style", `transform: scale(0.${window.pageYOffset + 100})`)
         }
     }
 }
@@ -31,6 +41,7 @@ const showTitle = () => {
 const apply = () => {
     showVisible()
     showTitle()
+    imageScale()
 }
 
 window.addEventListener('scroll', apply)
@@ -38,8 +49,10 @@ apply()
 
 
 // Efeito da imagem
+/*
 let image = document.getElementById('big')
     
-document.addEventListener("scroll", function() {
-    image.style.transform = `scale(0.${window.pageYOffset})`
+window.addEventListener("scroll", function() {
+    image.style.transform = `scale(0.${window.pageYOffset + 200})`
 }, false);
+*/
