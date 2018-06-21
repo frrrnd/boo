@@ -15,6 +15,7 @@ body {
     width: 100%;
     min-height: 100%;
     font-family: 'Helvetica Neue', Arial;
+    background-color: black;
 }
 
 .container {
@@ -48,6 +49,11 @@ body {
     background-color: #4aa0e9;
 }
 
+.section:nth-child(5),
+.section:nth-child(6) {
+    background-color: black;
+}
+
 .square {
     width: 200px;
     height: 200px;
@@ -75,4 +81,14 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.texts {
+    color: #fff;
+    opacity: 0;
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
 }

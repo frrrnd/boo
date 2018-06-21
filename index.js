@@ -35,3 +35,11 @@ const apply = () => {
 
 window.addEventListener('scroll', apply)
 apply()
+
+
+// Efeito da imagem
+let image = document.getElementById('big')
+    
+document.addEventListener("scroll", function() {
+    image.style.transform = `scale(0.${window.pageYOffset})`
+}, false);
