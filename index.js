@@ -33,7 +33,7 @@ let images = document.querySelectorAll('[data-appear-image]')
 const imageScale = () => {
     for (const img of images) {
         if (isVisible(img)) {
-            img.setAttribute("style", `transform: scale(0.${window.pageYOffset + 100})`)
+            img.setAttribute("style", `transform: scale(0.${window.pageYOffset + 1000})`)
         }
     }
 }
