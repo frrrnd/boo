@@ -1,4 +1,4 @@
-<img align="center" src="boo-transp.png" style="max-width: 200px;">
+<img align="center" src="boo-transp.png" width="200">
 
 # boo
 
