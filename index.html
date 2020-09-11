@@ -4,40 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>viewport test</title>
+    <title>boo</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/styles/dracula.min.css">
+
 </head>
 <body>
     <div class="container">
-        <section class="section">
-            <div class="square" data-appear>1</div>
-        </section>
-
-        <section class="section">
-            <div class="square" data-appear>2</div>    
-            <div class="square" data-appear-title>My Title</div>    
-        </section>
-
-        <section class="section">
-            <div class="square" data-appear>3</div>
-        </section>
-
-        <section class="section">
-            <div class="square" data-appear>4</div>
-        </section>
-
-        <section class="section">
-            <div class="texts" data-appear>
-                <h1>Essa é a minha headline.</h1>
-                <p>Este é o meu parágrafo de teste.</p>
+        <section class="section section--center">
+            <div class="wrap" >
+                <img src="boo-transp.png" data-appear>
+                <h1>boo</h1>
+                <p>um simples plugin em vanilla js para adicionar classes em elementos visíveis na viewport</p>
+                <div class="buttons">
+                    <a class="github-button" href="https://github.com/frrrnd/boo" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Star frrrnd/boo on GitHub">Star</a>
+                    <a class="github-button" href="https://github.com/frrrnd/boo/archive/master.zip" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Download frrrnd/boo on GitHub">Download</a>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <img class="image" src="keyboard.jpg" alt="Keyboard" data-appear-image>
+            <div class="wrap">
+                <h2>instruções</h2>
+                <h3>&bull; chamar o plugin</h3>
+<pre><code class="xml">
+    &lt;script src="boo.js"&gt;&lt;/script&gt;
+
+</code></pre>
+            </div>
+
+            <div class="wrap">
+                <h3>&bull; adicionar o atributo data-appear no elemento</h3>
+<pre><code class="xml">
+    &lt;div class="element" data-appear&gt;&lt;/div&gt;
+
+</code></pre>
+            </div>
+            
+            <div class="wrap">
+                <h3>&bull; controlar a animação via css</h3>
+<pre><code class="css">
+/* classe padrão que pode ser alterada */
+
+    .makeMeAppear { 
+        animation: makeMeAppear .8s ease 1s forwards; 
+    }
+
+    @keyframes makeMeAppear {
+        0% { 
+            opacity: 0;
+            transform: translateY(55px);
+        }
+        
+        100% { 
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+</code></pre>
+            </div> 
+        </section>
+
+        <section class="section">
+            <div class="wrap" data-appear>
+                <img src="boo-transp.png">
+                <div class="buttons">
+                    <a class="github-button" href="https://github.com/frrrnd/boo" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Star frrrnd/boo on GitHub">Star</a>
+                    <a class="github-button" href="https://github.com/frrrnd/boo/archive/master.zip" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Download frrrnd/boo on GitHub">Download</a>
+                </div>
+                <a href="https://frrrnd.design" target="_blank" class="creds">Fernando Soares © 2020.</a>
+            </div>
         </section>
     </div>
 
-    <script src="index.js"></script>
+    <script src="boo.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/highlight.min.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
 </body>
 </html>

@@ -14,8 +14,38 @@ body {
     padding: 0;
     width: 100%;
     min-height: 100%;
-    font-family: 'Helvetica Neue', Arial;
+    font-family: 'IBM Plex Mono', monospace;
     background-color: black;
+}
+
+img  {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: #959595;
+}
+
+p {
+    width: 100%;
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.6;
+    margin: 21px auto;
 }
 
 .container {
@@ -29,35 +59,21 @@ body {
     display: flex;
     width: 100%;
     height: 100vh;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: #111;
 }
 
-.section:nth-child(1) {
-    background-color: #ff4862;
+.section--row {
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.section:nth-child(2) {
-    background-color: #0cad4c;
+.section:nth-child(odd) {
+    background-color: #7545ff;
 }
 
-.section:nth-child(3) {
-    background-color: #9132d4;
-}
-
-.section:nth-child(4) {
-    background-color: #4aa0e9;
-}
-
-.section:nth-child(5),
-.section:nth-child(6) {
-    background-color: black;
-}
-
-.section:nth-child(6) {
-    background: linear-gradient(#000, rgb(10, 14, 49));
-    padding-bottom: 20em;
-}
 
 .square {
     width: 200px;
@@ -73,7 +89,9 @@ body {
 }
 
 .makeMeAppear {
-    animation: makeMeAppear .4s ease .8s forwards;
+    opacity: 0;
+    animation: makeMeAppear .8s ease 1s forwards;
+    display: block;
 }
 
 @keyframes makeMeAppear {
@@ -88,31 +106,43 @@ body {
     }
 }
 
-
-.makeMeAppearTitle {
-    animation: makeMeAppearTitle .4s ease .8s forwards;
-}
-
-@keyframes makeMeAppearTitle {
-    0% {
-        opacity: 0;
-        transform: translateX(55px)
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.texts {
-    color: #fff;
-    opacity: 0;
-}
-
-.image {
-    display: block;
+code {
+    width: 100%;
+    padding: 21px;
     margin: 0 auto;
+    background-color: #282a36;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.wrap {
     max-width: 100%;
-    height: auto;
+    width: 800px;
+    margin: 0 auto 32px;
+}
+
+.section--center {
+    justify-content: center;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttons span {
+    display: inline-block;
+    margin: 21px 8px;
+}
+
+.creds {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    display: block;
+    text-decoration: none;
 }
