@@ -1,8 +1,8 @@
-<img align="center" src="boo-transp.png" style="max-width: 300px;">
+<img align="center" src="boo-transp.png" style="max-width: 200px;">
 
 # boo
 
-um simples plugin em vanilla js para adicionar classes em elementos visíveis na viewport.
+um plugin simples em vanilla js para adicionar classes em elementos visíveis na viewport.
 
 [DEMO](https://frrrnd.design/boo)
 
@@ -34,3 +34,5 @@ um simples plugin em vanilla js para adicionar classes em elementos visíveis na
             transform: translateY(0);
         }
     }
+
+---
