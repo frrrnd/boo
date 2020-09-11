@@ -1,6 +1,7 @@
 <div align="center">
     <img src="boo-transp.png" width="400">
 </div>
+
 # boo
 
 um plugin simples em vanilla js para adicionar classes em elementos visíveis na viewport.
